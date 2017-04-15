@@ -24,7 +24,7 @@ Vagrant.configure("2") do |config|
 
   if Vagrant::Util::Platform.windows?
     puts "Vagrant launched from windows. No rsync available using virtualbox for sync"
-    config.vm.synced_folder ".", "/var/www/localizator", owner: "vagrant", group: "www-data", mount_options: ["dmode=775,fmode=664"];
+    config.vm.synced_folder ".", "/var/www/localizator", owner: "vagrant", group: "www-data", mount_options: ["dmode=775,fmode=775"];
   else
     puts "Vagrant launched. Using rsync for sync"
     config.vm.synced_folder ".", "/var/www/localizator", type: "rsync", rsync__exclude: "node_modules/", mount_options: ["dmode=775,fmode=775"];
@@ -47,5 +47,5 @@ Vagrant.configure("2") do |config|
   config.vm.provision "file", source: "~/.gitconfig", destination: ".gitconfig"
 
   config.vm.provision :shell, path: "bootstrap.sh"
-  #config.vm.provision :shell, path: "bootstrap-mongo.sh"
+
 end
