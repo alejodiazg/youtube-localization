@@ -1,0 +1,5 @@
+{
+    "require": {
+        "moloquent/moloquent": "^0.4.0"
+    }
+}
