@@ -93,7 +93,8 @@
                 
             </div>
             <div class="content" id="app">
-                
+                <example></example>
+                <md-button class="md-raised md-primary">Primary</md-button>
             </div>
         </div>
 

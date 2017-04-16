@@ -17,6 +17,7 @@
   "dependencies": {
     "cross-env": "^3.2.4",
     "laravel-mix": "^0.8.9",
+    "vue-material": "^0.7.1",
     "webpack": "^2.4.1"
   }
 }

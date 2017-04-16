@@ -15,6 +15,10 @@ require('./bootstrap');
 
 Vue.component('example', require('./components/Example.vue'));
 
+var VueMaterial = require('vue-material')
+require('vue-material/dist/vue-material.css')
+Vue.use(VueMaterial)
+
 const app = new Vue({
     el: '#app'
 });
